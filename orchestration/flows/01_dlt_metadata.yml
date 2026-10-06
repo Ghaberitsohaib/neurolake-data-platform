@@ -1,0 +1,9 @@
+id: 01_dlt_metadata
+namespace: neurolake
+description: Sync AI model registry and feature catalog via dltHub
+
+tasks:
+  - id: run_dlt_ingestion
+    type: io.kestra.plugin.scripts.python.Commands
+    commands:
+      - python ingestion/dlt_models_metadata_pipeline.py

@@ -1,0 +1,17 @@
+name: 'neurolake_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'neurolake_duckdb'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  neurolake_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

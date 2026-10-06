@@ -1,0 +1,9 @@
+id: 02_kafka_streaming
+namespace: neurolake
+description: Stream LLM inference telemetry to Bronze Lakehouse & Feature Store
+
+tasks:
+  - id: consume_and_sink_stream
+    type: io.kestra.plugin.scripts.python.Commands
+    commands:
+      - python streaming/consumer_to_lakehouse.py

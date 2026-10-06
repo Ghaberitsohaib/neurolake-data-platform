@@ -1,0 +1,9 @@
+id: 04_dbt_analytics
+namespace: neurolake
+description: Run dbt dimensional transformations and quality assertions
+
+tasks:
+  - id: execute_dbt_models
+    type: io.kestra.plugin.scripts.python.Commands
+    commands:
+      - python analytics_dbt/run_dbt.py
